@@ -25,4 +25,4 @@ graph TD
     C --> |High-dimensional Vectorization| D[(📚 Milvus Vector DB)]
     D --> |Semantic retrieval of audit rules| E[🧠 DeepSeek-R1 + Structured Prompt]
     E --> |Generates Internal CoT| F[⚙️ Signal Parser]
-    F --> G[{JSON Output: direction & confidence}]
+    F --> G[JSON Output: direction and confidence]
