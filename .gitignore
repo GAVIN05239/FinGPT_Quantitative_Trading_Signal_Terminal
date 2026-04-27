@@ -1,0 +1,22 @@
+# Hide environment and secrets (absolutely do not upload!)
+.env
+.venv
+env/
+venv/
+
+# Python cache and junk files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local database files (large and change frequently)
+*.db
+*.sqlite3
+financial_rag.db
+
+# Jupyter / Colab auto-generated checkpoint files
+.ipynb_checkpoints/
+
+# OS-generated hidden files
+.DS_Store
+Thumbs.db
