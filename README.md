@@ -1,4 +1,4 @@
-# 🚀 FinGPT: Quantitative Trading Signal Terminal
+# # 🚀 FinGPT: Quantitative Trading Signal Terminal
 
 ![Python](https://img.shields.io/badge/python-3.10-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
@@ -18,15 +18,11 @@ FinGPT is an end-to-end financial quantitative trading signal extraction engine.
 
 ## 🏗️ System Architecture
 
-```text
-[Long Financial News Input] 
-           ↓ 
-(Automated Fact Dehydration) -> Extracts hard strategic facts 
-           ↓ 
-[Sentence-Transformers] -> High-dimensional Vectorization
-           ↓ 
-[Milvus Vector DB] -> Semantic retrieval of audit rules (RAG)
-           ↓ 
-[DeepSeek-R1 + Structured Prompt] -> Generates Internal CoT
-           ↓
-[Signal Parser] -> Standard JSON Output {"direction": 1, "confidence": 95}
+```mermaid
+graph TD
+    A[📄 Long Financial News Input] --> B(🧽 Automated Fact Dehydration)
+    B --> |Extracts hard strategic facts| C[🧮 Sentence-Transformers]
+    C --> |High-dimensional Vectorization| D[(📚 Milvus Vector DB)]
+    D --> |Semantic retrieval of audit rules| E[🧠 DeepSeek-R1 + Structured Prompt]
+    E --> |Generates Internal CoT| F[⚙️ Signal Parser]
+    F --> G[{JSON Output: direction & confidence}]
